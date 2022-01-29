@@ -10,7 +10,7 @@ export default function Header(){
                 <h3>Away From Home!</h3>
                 <p className='details'>Shop at Vandana's for an exquisite array of products that transport you back to sunny afternoons when you were 11.</p>
                 <div className='header-btns'>
-                    <a href='#' className='header-btn'>Order Now!</a>
+                    <a href='/Products' className='header-btn'>Order Now!</a>
                 </div>
             </div>
         </div>

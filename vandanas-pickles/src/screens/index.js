@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import Login from "./Login/login";
 import Register from "./Register/register";
-import './index.css';
+import './styles.css';
 import { AccountContext } from "../accountContext";
 
 

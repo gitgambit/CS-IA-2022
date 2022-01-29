@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import logo from '../../../images/logo.png';
 import './NavBar.css'
+
 export default function Navbar() {
 
     const[nav,setnav] = useState(false);
@@ -12,6 +13,11 @@ export default function Navbar() {
         else{
             setnav(false);
         }
+    }
+    const userName = sessionStorage.getItem('user');
+    const signOutHandler = () => {
+        sessionStorage.removeItem('user');
+        window.location.reload(true);
     }
 
     window.addEventListener('scroll',changeBackground);
@@ -26,10 +32,19 @@ export default function Navbar() {
             </label>
             <ul className='menu'>
             <li><a href="/">Home</a></li>
-            <li><a href="/">Products</a></li>
+            <li><a href="/Products">Products</a></li>
             <li><a href="/AboutUs">About Us</a></li>
             <li><a href="/ContactUs">Contact Us</a></li>
-            <li><a href="/Login">Login</a></li> 
+            {
+                userName?(
+                    <>
+                    <li><a href="/Cart">Cart</a></li>
+                    <li><a onClick={signOutHandler}>Logout</a></li>
+                    </>
+                ):(
+                    <li><a href="/Login">Login</a></li> 
+                )
+            }
             </ul>
         </nav>
     )

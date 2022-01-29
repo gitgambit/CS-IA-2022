@@ -12,7 +12,6 @@ export default function Footer() {
         <li><a href="#">Our Services</a></li>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="/TermsAndConditions">Terms & Conditions</a></li>
-        <li><a href="/Testimonials">Testimonials</a></li>
         </ul>
         </div>
 
