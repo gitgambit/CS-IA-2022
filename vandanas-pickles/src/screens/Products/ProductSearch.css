@@ -1,0 +1,24 @@
+.search-results-container{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.search-results-product-container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search-results-product-container .result-container{
+    margin: 60px 26px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.search-results-product-container .search-title{
+    margin-top: 100px;
+    width: 100%;
+    padding: 5px;
+    font-size: 35px;
+    font-weight: 500;
+}

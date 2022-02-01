@@ -3,7 +3,9 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import router from './flows/userRoute.js';
+import userRouter from './flows/userRoute.js';
+import productRouter from './flows/productRoute.js';
+import orderRouter from './flows/cartRouter.js';
 import "dotenv/config.js";
 
 const app = express();
@@ -15,7 +17,9 @@ app.use(
 );
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/users', router);
+app.use('/users', userRouter);
+app.use('/products', productRouter)
+app.use('/orders', orderRouter)
 // DB Config
 const db = process.env.DBURL;
 // Connect to MongoDB

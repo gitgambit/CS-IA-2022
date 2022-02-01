@@ -1,11 +1,15 @@
 import React, { Component,useContext } from 'react';
 import '../globalstyles.css';
 import axios from 'axios';
+import { withRouter, Redirect } from 'react-router-dom'
 import { AccountContext } from "../../accountContext.js";
 
 
 class Login extends Component{
     static contextType = AccountContext;
+    loginState = {
+        redirect : false,
+    }
    constructor(){
        super()
            this.state = {
@@ -38,7 +42,9 @@ class Login extends Component{
         .then(res => 
            {
             if (res.status == 200){
-                
+                sessionStorage.setItem('user', res.data.name);
+                sessionStorage.setItem('number', res.data.number);
+                this.loginState.redirect = true;
             }
            })
 
@@ -46,6 +52,13 @@ class Login extends Component{
             email: '',
             password: ''
         })
+    }
+
+    redirectHome() {
+        if (this.loginState.redirect) {
+            <Redirect push to="/" />
+            return window.location.reload(true);
+        }
     }
     render(){
         const {switchToRegister} = this.context;
@@ -56,11 +69,13 @@ class Login extends Component{
                     <input className = "input"  type="password" placeholder="Password" onChange={this.changePassword} value={this.state.password}/>
                     <button className="submitButton" type="submit" >Sign In</button>
                 </form>
+                {this.redirectHome()}
             <div className="question"> Don't have an account?</div>
             <a className="link" onClick={switchToRegister}>Sign Up</a>
             </div>
+            
         )
     }
 }
 
-export default Login;
+export default withRouter(Login);

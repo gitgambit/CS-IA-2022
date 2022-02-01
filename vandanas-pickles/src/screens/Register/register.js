@@ -11,11 +11,13 @@ class Register extends Component{
            this.state = {
                name: '',
                email: '',
+               number: '',
                password: ''
            }
             //changes value when form value updated and binds it to original values in data obj
            this.changeName = this.changeName.bind(this)
            this.changeEmail = this.changeEmail.bind(this)
+           this.changeNumber= this.changeNumber.bind(this)
            this.changePassword = this.changePassword.bind(this)
            this.onSubmit = this.onSubmit.bind(this)
    }
@@ -29,6 +31,11 @@ class Register extends Component{
             email:event.target.value
         })
     }
+    changeNumber(event){
+        this.setState({
+            number: event.target.value
+        })
+    }
     changePassword(event){
         this.setState({
             password:event.target.value
@@ -40,6 +47,7 @@ class Register extends Component{
         const registerUser = {
             name: this.state.name,
             email: this.state.email,
+            number: parseInt(this.state.number),
             password: this.state.password
         }
         axios.post('http://localhost:5000/users/register', registerUser)
@@ -48,6 +56,7 @@ class Register extends Component{
         this.setState ({
             name: '',
             email: '',
+            number: '',
             password: ''
         })
     }
@@ -58,6 +67,7 @@ class Register extends Component{
                 <form onSubmit={this.onSubmit}  className="formContainer">
                     <input className = "input"  type="text" placeholder="Name" onChange={this.changeName} value={this.state.name}/>
                     <input className = "input"  type="email" placeholder="Email" onChange={this.changeEmail} value={this.state.email}/>
+                    <input className = "input"  type="tel" placeholder="Phone Number" onChange={this.changeNumber} value={this.state.number}/>
                     <input className = "input"  type="password" placeholder="Password" onChange={this.changePassword} value={this.state.password}/>
                     <button className="submitButton" type="submit" value="submit">Sign Up</button>
                 </form>

@@ -7,7 +7,7 @@ nav{
 	top: 0;
 	width:100%;
     background-color: white;
-	z-index: 1;
+	z-index: 5;
     transition: 0.6s ease-in-out;
 }
 nav.active{
@@ -16,6 +16,7 @@ nav.active{
 nav ul{
 	display: flex;
 }
+
 nav ul li a{
     font-family: 'Bebas Neue';
 	height:40px;

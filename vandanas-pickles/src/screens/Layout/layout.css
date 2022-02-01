@@ -2,13 +2,3 @@
     box-sizing: border-box;
 }
 
-.maincontent {
-    margin: 4.5rem 0rem 2rem 0rem;
-    align-self: center;
-}
-
-.content-container {
-    margin: 2.5rem 1em 2.5rem 1em;
-    max-width: 1126px;
-    padding: 10px 10px 10px 0px;
-}

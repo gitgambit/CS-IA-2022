@@ -6,8 +6,8 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String, required: true, unique: true, index: true, dropDups: true,
   },
+  number: {type: Number, required: true, unique: true, length: 10},
   password: { type: String, required: true },
-  isAdmin: { type: Boolean, required: true, default: false },
 });
 
 const User = mongoose.model('User', userSchema);
