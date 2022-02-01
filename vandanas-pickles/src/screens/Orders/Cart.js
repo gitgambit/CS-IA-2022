@@ -75,7 +75,7 @@ const Cart = () => {
                         </>
                     )}
                 </div>
-                {(name && ( cartItems) ? (
+                {(name && ( cartItems)) ? (
                 <div className='col-4'>
                         <ul>
                             <li>
