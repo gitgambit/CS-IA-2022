@@ -26,7 +26,7 @@ const Cart = () => {
             PhoneNumber: phone,
             product: cartItems,
         }
-        axios.post(`http://localhost:5000//api/orders/`, Order)
+        axios.post(`/api/orders/`, Order)
         .then(res => {
             console.log(res.data);
             sessionStorage.removeItem('cartItems');

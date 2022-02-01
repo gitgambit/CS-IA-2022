@@ -38,7 +38,7 @@ class Login extends Component{
             email: this.state.email,
             password: this.state.password
         }
-        axios.post('http://localhost:5000/api/users/signin', loginUser)
+        axios.post('/api/users/signin', loginUser)
         .then(res => 
            {
             if (res.status == 200){

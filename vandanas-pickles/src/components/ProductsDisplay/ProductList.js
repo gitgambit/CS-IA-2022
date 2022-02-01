@@ -16,7 +16,7 @@ export default class ProductList extends Component{
     }
     categories = ["low to high", "high to low"];  
     componentDidMount() {
-        axios.get(`http://localhost:5000/api/products/`)
+        axios.get(`/api/products/`)
         .then(res => {
             const products = res.data;
             this.setState({products});

@@ -7,7 +7,7 @@ const SingleProduct = ({product}) => {
 
     const addToCart = () => {
         if (sessionStorage.getItem('user')){
-        axios.get(`http://localhost:5000/api/products/${product._id}`)
+        axios.get(`/api/products/${product._id}`)
         .then(res => {
             const product = res.data;
             const products = [product]
