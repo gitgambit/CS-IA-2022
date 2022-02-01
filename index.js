@@ -7,7 +7,6 @@ import userRouter from './flows/userRoute.js';
 import productRouter from './flows/productRoute.js';
 import orderRouter from './flows/cartRouter.js';
 import "dotenv/config.js";
-import '../v'
 const app = express();
 // Bodyparser middleware
 app.use(
@@ -35,8 +34,8 @@ mongoose
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
 // Serve static files from the React frontend app
-app.use(express.static(path.join(__dirname, '../vandanas-pickles/build')))
+app.use(express.static(path.join(__dirname, 'vandanas-pickles/build')))
 // Anything that doesn't match the above, send back index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/../vandanas-pickles/build/index.html'))
+  res.sendFile(path.join(__dirname + 'vandanas-pickles/build/index.html'))
 })
