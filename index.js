@@ -17,9 +17,9 @@ app.use(
 );
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/users', userRouter);
-app.use('/products', productRouter)
-app.use('/orders', orderRouter)
+app.use('/api/users', userRouter);
+app.use('/api/products', productRouter)
+app.use('/api/orders', orderRouter)
 // DB Config
 const db = process.env.DBURL;
 

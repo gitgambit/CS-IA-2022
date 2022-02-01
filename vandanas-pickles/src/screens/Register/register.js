@@ -50,7 +50,7 @@ class Register extends Component{
             number: parseInt(this.state.number),
             password: this.state.password
         }
-        axios.post('http://localhost:5000/users/register', registerUser)
+        axios.post('http://localhost:5000/api/users/register', registerUser)
         .then(response => console.log(response.data))
 
         this.setState ({
