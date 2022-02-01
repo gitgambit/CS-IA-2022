@@ -20,7 +20,7 @@ app.use(
 app.use(cors());
 app.use(bodyParser.json());
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, '/vandanas-pickles/build')))
+app.use(express.static(path.join(__dirname, 'vandanas-pickles/build')))
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter)
@@ -39,3 +39,6 @@ mongoose
   .catch(err => console.log(err));
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/vandanas-pickles/build/index.html'))
+})
