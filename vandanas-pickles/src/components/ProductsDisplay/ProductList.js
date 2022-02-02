@@ -37,7 +37,7 @@ export default class ProductList extends Component{
     }
     render(){
         return (
-            <>
+            <div className="product-list-container">
             <div className='margin-60-top'>
             <Dropdown options={this.categories} onChange={this._onSelect} placeholder="Sort by Price" />
                 <div className='single-product-container'>
@@ -48,7 +48,7 @@ export default class ProductList extends Component{
                     })}
                 </div> 
                 </div>
-                </>
+                </div>
         )
     }
 }
