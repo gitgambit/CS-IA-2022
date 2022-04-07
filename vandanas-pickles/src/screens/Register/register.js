@@ -59,6 +59,7 @@ class Register extends Component{
             number: '',
             password: ''
         })
+        window.alert('Successfully Registered! Move onto login.');
     }
     render(){
         const {switchToLogin} = this.context;

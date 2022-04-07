@@ -56,6 +56,7 @@ class Login extends Component{
 
     redirectHome() {
         if (this.loginState.redirect) {
+            window.alert('Successfully logged in!');
             <Redirect push to="/" />
             return window.location.reload(true);
         }
