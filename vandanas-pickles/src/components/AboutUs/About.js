@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import aboutimage from '../../images/about.png';
+import aboutimage from '../../images/aboutvandana.jpeg';
 
 function About() {
     return (
@@ -8,12 +8,12 @@ function About() {
         <h1>About Us</h1>
         <div className="sections" id='about'>
             <section>
-            <img src="https://i.ibb.co/Z6vLcz5/01.jpg" alt="" />
+            <img src={aboutimage} alt="im not working" />
             </section>
             <section>
             <h2 class="title">How It Started</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu facilisis sed odio morbi quis commodo. Eget nunc scelerisque viverra mauris in aliquam sem fringilla ut. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Sit amet facilisis magna etiam tempor orci. Curabitur vitae nunc sed velit dignissim sodales ut eu. Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Odio tempor orci dapibus ultrices in iaculis nunc sed. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Urna porttitor rhoncus dolor purus non. Cras sed felis eget velit aliquet sagittis id. In nibh mauris cursus mattis molestie a iaculis at. Vitae turpis massa sed elementum tempus egestas sed. Massa tincidunt nunc pulvinar sapien.</p> <br/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu facilisis sed odio morbi quis commodo. Eget nunc scelerisque viverra mauris in aliquam sem fringilla ut. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Sit amet facilisis magna etiam tempor orci. Curabitur vitae nunc sed velit dignissim sodales ut eu. Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Odio tempor orci dapibus ultrices in iaculis nunc sed. Adipiscing commodo elit at imperdiet dui accumsan sit amet. Urna porttitor rhoncus dolor purus non. Cras sed felis eget velit aliquet sagittis id. In nibh mauris cursus mattis molestie a iaculis at. Vitae turpis massa sed elementum tempus egestas sed. Massa tincidunt nunc pulvinar sapien.</p> <br/>
+            <p>
+            Mrs Vandana Aggarwal was continually experimenting with and creating new cuisines of various types. This was the beginning of her pickle-making career; initially, she made little boxes for immediate family and friends to eat. They gave her such positive feedback that she was inspired to try new recipes and grow her production from the comfort of her own home. She began producing a variety of veggies and collecting a variety of mason jars and glass jars. Following that, she concentrated on honing her talents in order to take the pickles to the next level, ensuring that they are both distinctive and in line with what people desire to eat. She first interacted with friends and family to get their input on the types of pickles they enjoy, and also on whether they would enjoy pickles made from certain vegetables. Once she gained this knowledge and designed the pickles based on the input from people, she began selling quaintly to people in the society and communicated through WhatsApp. The prices complimented the quality of her products which helped her to sell in small fairs and also make samples to increase the number of customers.            </p> <br/>
             </section>
         </div>
         </>
