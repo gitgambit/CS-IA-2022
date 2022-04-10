@@ -83,7 +83,7 @@ const Cart = () => {
                                 <p className='name'>
                                     Total for {cartItems.length}  items :
                                 </p>
-                                <p className='prices'>Rs {cartItems.reduce((a,c) => a + c.price, 0)}</p>
+                                <p className='prices'>Rs {cartItems.reduce((a,c) => a + parseInt(c.price,10), 0)}</p>
                             </div>
                             <p className='taxes'>*Refer to Whatsapp Invoice for breakdown of prices</p>
                             </li>

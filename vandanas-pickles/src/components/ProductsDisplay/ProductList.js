@@ -1,5 +1,6 @@
 import React, {Component, useMemo, useState} from 'react'
 import axios from 'axios'
+import { products } from '../../product';
 import SingleProduct from './SingleProduct'
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -16,12 +17,9 @@ export default class ProductList extends Component{
     }
     categories = ["low to high", "high to low"];  
     componentDidMount() {
-        axios.get(`/api/products/`)
-        .then(res => {
-            const products = res.data;
+        
             this.setState({products});
             sessionStorage.setItem('products', JSON.stringify(products));
-        })
     };
 
     _onSelect(category){

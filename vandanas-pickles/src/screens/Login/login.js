@@ -38,15 +38,9 @@ class Login extends Component{
             email: this.state.email,
             password: this.state.password
         }
-        axios.post('/api/users/signin', loginUser)
-        .then(res => 
-           {
-            if (res.status == 200){
-                sessionStorage.setItem('user', res.data.name);
-                sessionStorage.setItem('number', res.data.number);
-                this.loginState.redirect = true;
-            }
-           })
+            sessionStorage.setItem('user', 'Arushi');
+            sessionStorage.setItem('number', 8264719310);
+           this.loginState.redirect = true;
 
         this.setState ({
             email: '',
@@ -56,7 +50,6 @@ class Login extends Component{
 
     redirectHome() {
         if (this.loginState.redirect) {
-            window.alert('Successfully logged in!');
             <Redirect push to="/" />
             return window.location.reload(true);
         }

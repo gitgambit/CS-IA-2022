@@ -28,12 +28,14 @@ app.use('/api/orders', orderRouter)
 
 // DB Config
 const db = process.env.DBURL;
+const uri = " mongodb+srv://evernote_admin:<lifeismeisthepassword>@cluster0.oegma.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 // Connect to MongoDB
 mongoose
   .connect(
     db,
-    { useNewUrlParser: true }
+    { useNewUrlParser: true,
+    }
   )
   .then(() => console.log("MongoDB successfully connected"))
   .catch(err => console.log(err));

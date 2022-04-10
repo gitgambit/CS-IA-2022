@@ -9,7 +9,7 @@ function Contact() {
                 <input type='text' placeholder='Full Name' />
                 <input type='email' placeholder='Type Your E-Mail' />
                 <textarea placeholder='Write Here.....'></textarea>
-                <input type='submit' value='BOOK'/>
+                <input type='submit' value='Send us a message!'/>
             </form>
         </div>
     )
